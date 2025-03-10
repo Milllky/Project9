@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
 
-    Radio radio = new Radio(0,100,0,10);
+    Radio radio = new Radio(0,100,0);
 
     @Test
     public void shouldSetVolume() {
@@ -147,6 +147,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetStation0() {
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(9);
         radio.nextStation();
@@ -159,6 +160,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetStation9() {
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
         radio.previousStation();
